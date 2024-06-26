@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/your-profile"><i class="fa-brands fa-linkedin fa-lg" style="color: #0077B5;"></i></a>
+            <a href="https://github.com/your-profile"><i class="fa-brands fa-github fa-lg" style="color: #333;"></i></a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><i class="fa-solid fa-bars" id="menubar"></i></li>
+            <li><i class="fa-solid fa-xmark" id="close"></i></li>
+        </ul>
+    </nav>
+    <aside class="sidebar" id="sidebar">
+        <p>Popular Destinations:</p>
+        <ul>
+            <li>Hawaii</li>
+            <li>Swiss Alps</li>
+            <li>Japan Cherry Blossoms</li>
+        </ul>
+    </aside>
+    <main>
+        <h1>About Us</h1>
+        <p>This is the About Us page content.</p>
+    </main>
+    <footer>
+        <p>&copy; Reserved By Your Name</p>
+    </footer>
+    <script>
+        var menubar = document.getElementById('menubar');
+        var close = document.getElementById('close');
+        var sidebar = document.getElementById('sidebar');
+        sidebar.style.display = 'none';
+        close.style.display = 'none';
+
+        menubar.addEventListener('click', () => {
+            sidebar.style.display = "block";
+            close.style.display = 'block';
+            menubar.style.display = 'none';
+        });
+
+        close.addEventListener('click', () => {
+            sidebar.style.display = 'none';
+            menubar.style.display = 'block';
+            close.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
